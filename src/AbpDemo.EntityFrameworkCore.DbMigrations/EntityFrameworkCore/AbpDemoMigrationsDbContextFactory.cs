@@ -14,7 +14,7 @@ namespace AbpDemo.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<AbpDemoMigrationsDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseMySql(configuration.GetConnectionString("Default"));
 
             return new AbpDemoMigrationsDbContext(builder.Options);
         }
